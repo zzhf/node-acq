@@ -1,7 +1,9 @@
 'use strict';
 
 import mongoose from 'mongoose';
-import config from 'config-lite';
+import config from './../config/default';
+
+console.log('config.url' + config.url);
 mongoose.connect(config.url, {useMongoClient:true});
 mongoose.Promise = global.Promise;
 

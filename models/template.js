@@ -12,8 +12,18 @@ const templateSchema = new Schema({
 		type: Number,
 		default: 1
 	},
-	createTime: Date,
-	modifyTime: Date
+	createTime: {
+		type: Date,
+		default: Date.now
+	},
+	modifyTime: {
+		type: Date,
+		default: Date.now
+	},
+	grammar: [{
+		name: String,
+		date: Date
+	}]
 })
 
 templateSchema.index({id: 1});

@@ -13,3 +13,12 @@
 // export default app => {
 // 	app.use('/template', template);
 // }
+// 
+
+'use strict';
+
+import template from './template';
+
+export default app => {
+	app.use('/template', template);
+}
